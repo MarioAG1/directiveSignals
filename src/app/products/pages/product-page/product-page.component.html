@@ -11,14 +11,16 @@
       <input formControlName="name" type="text" class="form-control" />
     </div>
     <div class="col-auto">
-      <span customLabel [color]="color">
+      <span customLabel [color]="color" [erros]="myForm.get('name')?.errors">
         Temporal
       </span>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <button [style.background-color]="color" (click)="changeColor() ">Cambiar color</button>
+      <button [style.background-color]="color" (click)="changeColor()">
+        Cambiar color
+      </button>
     </div>
   </div>
 </form>
@@ -26,5 +28,5 @@
 <pre class="mt-5">{{ myForm.get("name")?.errors | json }}</pre>
 
 <pre class="mt-5">
-  {{color}}
+  {{ color }}
 </pre>

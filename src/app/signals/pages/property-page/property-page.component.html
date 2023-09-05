@@ -30,6 +30,10 @@
     <!-- Informacion del usuario -->
     <pre>
       {{ user() | json }}
+      {{fullName()}}
     </pre>
+    <button class="btn btn-primary" (click)="increaseBy(+1)">
+      +1
+    </button>
   </div>
 </div>
